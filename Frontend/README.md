@@ -19,7 +19,7 @@ This is a **proof-of-work** web application that allows users to generate simple
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/manim-animation-generator.git
+git clone https://github.com/HarshVz/MotionMind.git
 cd manim-animation-generator
 ```
 
