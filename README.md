@@ -1,3 +1,5 @@
+![Image Preview](https://raw.githubusercontent.com/HarshVz/MotionMind/main/Frontend/public/preview.png)
+
 # 🎞️ Manim-Based Animation Generator (Proof of Concept)
 
 This is a **proof-of-work** web application that allows users to generate simple Manim animations via a web interface. It integrates a Python backend powered by **LangChain** and **Gemini (LLM)** with a **Next.js** frontend styled using **TailwindCSS**.
@@ -70,12 +72,6 @@ python app.py  # or your entry point
 - This is **not production-ready**.
 - It is a basic **proof of concept** to demonstrate frontend–LLM–Manim integration.
 - Contributions and suggestions are welcome!
-
----
-
-## 📷 Demo (Optional)
-
-![Watch the Demo Video](./Frontend/public/preview.mp4)
 
 ---
 
