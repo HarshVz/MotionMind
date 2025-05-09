@@ -1,0 +1,9 @@
+Flask
+flask-cors
+pydantic
+langchain
+langchain-google-genai
+google-generativeai
+waitress
+manim
+python-dotenv
