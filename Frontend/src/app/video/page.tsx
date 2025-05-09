@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Send, Loader2 } from "lucide-react"
 import axios from "axios"
 import {motion} from "motion/react"

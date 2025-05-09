@@ -1,6 +1,6 @@
 "use client"
 
-import React,{useEffect, useState} from "react"
+import React,{useState} from "react"
 import {Send} from "lucide-react"
 import axios from "axios"
 import {motion} from "motion/react"
@@ -15,8 +15,6 @@ interface ResponseInterface{
 export default function Generate(){
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
-    const [response, setResponse] = useState<ResponseInterface | null>(null)
-    const [success, setSuccess] = useState(false)
     const [video, setVideo] = useState("")
     const [resp, setResp] = useState<string[]>([])
     const [query, setQuery] = useState("")
@@ -37,38 +35,6 @@ export default function Generate(){
             console.log(res)
         });
         setQuery("")
-    }
-
-    const handleStream = async (query: string) => {
-        try{
-            const response = await fetch("http://localhost:5000/stream", {
-                method: "GET",
-                headers: {
-                  "Content-Type": "application/json",
-                }
-              });
-              if (!response.body) throw new Error("No response body");
-
-              const reader = response.body.getReader();
-              const decoder = new TextDecoder();
-
-              while (true) {
-                const { value, done } = await reader.read();
-                if (done) break;
-
-                const chunk = decoder.decode(value, { stream: true });
-                console.log("Chunk received:", chunk);
-
-                // Update state with just the new chunk
-                setResp(prevResp => [...prevResp, chunk]);
-              }
-        } catch (err) {
-          console.error("Streaming error:", err);
-          setError(true);
-        } finally {
-          setLoading(false);
-        }
-
     }
 
     const getVideo = async (videoPath: string) => {
@@ -141,18 +107,6 @@ export default function Generate(){
         }
 
     }
-
-
-    useEffect(() => {
-    //   const query: string = "Create an animation with visual representation of CRUD operation in a table, take example table with 3 rows.";
-    //   handleGenerate(query).then((res) => {
-    //     console.log(res)
-    //   });
-    // getVideo(path).then((res) => {
-    //     console.log(res)
-    // })
-
-    }, [])
 
 
     return (

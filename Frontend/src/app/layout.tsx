@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Host_Grotesk } from "next/font/google";
 import { AnimatePresence } from "motion/react";
-import Loader from "@/components/Loader"
 import "./globals.css";
 
 const hostgrotesk = Host_Grotesk({
