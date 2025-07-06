@@ -42,7 +42,7 @@ export default function Generate(){
             const formData = new FormData();
             formData.append("path", videoPath)
 
-            const response = await axios.post("http://localhost:5000/video", formData, {
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_VIDEO}`, formData, {
                 responseType: "blob"
             });
             // console.log(response.data)
@@ -68,7 +68,7 @@ export default function Generate(){
             const form = new FormData()
             form.append("query", query)
 
-            const response = await fetch("http://localhost:5000/generate", {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_GENERATE}`, {
                 method: "POST",
                 body: form
               });
