@@ -29,14 +29,6 @@ export const metadata: Metadata = {
       url: "https://yourdomain.com",
       siteName: "Manim Animation Generator",
       type: "website",
-      images: [
-        {
-          url: "./preview.png", // Replace with your actual image
-          width: 1200,
-          height: 630,
-          alt: "Manim Animation Example",
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -44,7 +36,6 @@ export const metadata: Metadata = {
       description:
         "Generate Manim animations online without writing code. Ideal for teachers, YouTubers, and educators.",
       creator: "@harshdev_",
-      images: ["/preview.png"],
     },
   };
 
